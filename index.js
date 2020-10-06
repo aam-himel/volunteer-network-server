@@ -11,8 +11,9 @@ const serviceAccount = require('./config/volunteer-network-34dd8-firebase-admins
 app.use(bodyParser.json());
 app.use(cors());
 
+let PORT = 5000;
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Server started at PORT ${process.env.PORT}`);
 })
 admin.initializeApp({
